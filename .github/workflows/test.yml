@@ -10,10 +10,9 @@ jobs:
 
     steps:
       - name: Inform on PR that Pass
-        uses: hussedev/add-pr-comment@v2
+        uses: mshick/add-pr-comment@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]'
           message: |
             ***Running***
             PASS
@@ -24,11 +23,10 @@ jobs:
 
     steps:
       - name: Inform on PR that Fails
-        uses: hussedev/add-pr-comment@v2
+        uses: mshick/add-pr-comment@v2
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: 'github-actions[bot]'
           status: 'failure'
           message-failure: |
             ***Running***
-            FAIL
+            FAILED
