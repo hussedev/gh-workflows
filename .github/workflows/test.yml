@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Inform on PR that Pass
-        uses: mshick/add-pr-comment@v2
+        uses: hussedev/add-pr-comment@make_check_fail
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           message: |
@@ -23,7 +23,7 @@ jobs:
 
     steps:
       - name: Inform on PR that Fails
-        uses: mshick/add-pr-comment@v2
+        uses: hussedev/add-pr-comment@make_check_fail
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           status: 'failure'
